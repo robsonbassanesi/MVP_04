@@ -1,0 +1,73 @@
+[2023-12-10 16:24:12,426] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:24:12] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:07,149] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:12,744] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:15,610] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:25:15,650] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:15] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:19,940] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:19] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:20,825] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:20] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:30,010] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:25:30,010] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:30] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:35,713] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:35] "GET /openapi/static/js/swagger-ui-bundle.js.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:35,715] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:35] "GET /openapi/static/js/swagger-ui-standalone-preset.js.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:35,744] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:35] "GET /openapi/static/css/swagger-ui.css.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:25:59,857] ERROR log_exception() L1890 Exception on /paciente [GET] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 187, in get_paciente
+    paciente = session.query(Paciente).filter(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/session.py", line 2912, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/coercions.py", line 413, in expect
+    resolved = impl._literal_coercion(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/coercions.py", line 651, in _literal_coercion
+    self._raise_for_expected(element, argname)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/coercions.py", line 1139, in _raise_for_expected
+    return super()._raise_for_expected(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/coercions.py", line 710, in _raise_for_expected
+    super()._raise_for_expected(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/coercions.py", line 535, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: Column expression, FROM clause, or other columns clause element expected, got <class 'model.paciente.Paciente'>.
+[2023-12-10 16:25:59,867] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:25:59] "GET /paciente HTTP/1.1" 500 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:26:52,166] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:26:56,001] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:26:56,035] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:26:56] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:30:31,881] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/model/paciente.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:30:59,715] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:30:59,764] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:30:59] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:05,484] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:05] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:05,834] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:05] "GET /openapi/static/css/swagger-ui.css.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:05,999] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:05] "GET /openapi/static/js/swagger-ui-bundle.js.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:06,132] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:06] "GET /openapi/static/js/swagger-ui-standalone-preset.js.map HTTP/1.1" 404 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:06,656] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:06] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:31:21,479] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:31:21,480] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:31:21] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:32:19,717] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/schemas/paciente_schema.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:34:01,782] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/schemas/paciente_schema.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:34:24,436] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:34:24,452] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:34:24] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:36:54,800] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:37:01,951] WARNING predict() L163  Erro ao adicionar paciente 'Pedro', Não foi possível salvar novo item :/ - call_trace=/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py L163 
+[2023-12-10 16:37:01,954] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:37:01] "POST /paciente HTTP/1.1" 400 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:37:30,230] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 

@@ -1,0 +1,118 @@
+[2023-12-10 16:37:32,721] ERROR log_exception() L1890 Exception on /paciente [POST] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 136, in predict
+    outcome=form(2)
+TypeError: 'PacienteSchema' object is not callable
+[2023-12-10 16:37:32,782] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:37:32] "POST /paciente HTTP/1.1" 500 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:37:51,454] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:37:54,179] ERROR log_exception() L1890 Exception on /paciente [POST] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 104, in predict
+    paciente = Paciente(
+TypeError: __init__() missing 1 required positional argument: 'outcome'
+[2023-12-10 16:37:54,188] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:37:54] "POST /paciente HTTP/1.1" 500 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:38:05,584] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:43:12,633] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/schemas/paciente_schema.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:43:30,579] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:43:35,432] ERROR log_exception() L1890 Exception on /paciente [POST] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 104, in predict
+    paciente = Paciente(
+TypeError: __init__() missing 1 required positional argument: 'outcome'
+[2023-12-10 16:43:35,441] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:43:35] "POST /paciente HTTP/1.1" 500 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:05,329] ERROR log_exception() L1890 Exception on /paciente [POST] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 104, in predict
+    paciente = Paciente(
+TypeError: __init__() missing 1 required positional argument: 'outcome'
+[2023-12-10 16:44:05,335] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:44:05] "POST /paciente HTTP/1.1" 500 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:13,744] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:44:13] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:14,554] INFO _log() L122  127.0.0.1 - - [10/Dec/2023 16:44:14] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:45,666] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/model/paciente.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:53,194] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/model/paciente.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:44:57,636] INFO _log() L122   * Detected change in '/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/model/paciente.py', reloading - call_trace=/usr/lib/python3/dist-packages/werkzeug/_internal.py L122 
+[2023-12-10 16:45:22,636] ERROR log_exception() L1890 Exception on /paciente [POST] - call_trace=/usr/lib/python3/dist-packages/flask/app.py L1890
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_openapi3/scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+  File "/mnt/c/Users/robso/OneDrive/Área de Trabalho/MVP_04/backend/app.py", line 104, in predict
+    paciente = Paciente(
+TypeError: __init__() missing 1 required positional argument: 'outcome'

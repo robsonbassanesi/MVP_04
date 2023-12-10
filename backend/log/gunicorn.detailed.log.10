@@ -1,0 +1,79 @@
+[2023-12-09 16:20:36,589] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:47,689] INFO _log() L186  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:47,689] INFO _log() L186  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:47,689] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:49,896] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:49] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:50,147] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:50] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:50,180] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:50] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:50,182] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:50] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:50,660] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:50] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:50,728] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:50] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:47:59,839] ERROR log_exception() L1449 Exception on /paciente [POST] - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "C:\Users\robso\OneDrive\Área de Trabalho\MVP_04\backend\app.py", line 105, in predict
+    paciente = Paciente(
+TypeError: Paciente.__init__() got an unexpected keyword argument 'radius_mean_column'
+[2023-12-09 16:47:59,839] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:47:59] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:49:35,101] INFO _log() L186   * Detected change in 'C:\\Users\\robso\\OneDrive\\Área de Trabalho\\MVP_04\\backend\\app.py', reloading - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:49:35,349] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:49:39,051] ERROR log_exception() L1449 Exception on /paciente [POST] - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "C:\Users\robso\OneDrive\Área de Trabalho\MVP_04\backend\app.py", line 105, in predict
+    paciente = Paciente(
+TypeError: Paciente.__init__() got an unexpected keyword argument 'area_mean_column'
+[2023-12-09 16:49:39,068] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:49:39] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:51:12,641] INFO _log() L186   * Detected change in 'C:\\Users\\robso\\OneDrive\\Área de Trabalho\\MVP_04\\backend\\app.py', reloading - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:51:12,871] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:51:17,768] ERROR log_exception() L1449 Exception on /paciente [POST] - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "C:\Users\robso\OneDrive\Área de Trabalho\MVP_04\backend\app.py", line 105, in predict
+    paciente = Paciente(
+TypeError: Paciente.__init__() got an unexpected keyword argument 'smoothness_sen'
+[2023-12-09 16:51:17,775] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:51:17] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:52:09,633] INFO _log() L186  127.0.0.1 - - [09/Dec/2023 16:52:09] "[35m[1mPOST /paciente HTTP/1.1[0m" 500 - - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:52:09,761] INFO _log() L186   * Detected change in 'C:\\Users\\robso\\OneDrive\\Área de Trabalho\\MVP_04\\backend\\app.py', reloading - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:52:10,159] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
+[2023-12-09 16:55:29,398] INFO _log() L186   * Restarting with stat - call_trace=C:\Users\robso\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L186 
