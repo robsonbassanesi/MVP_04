@@ -37,8 +37,8 @@ Y = dataset.iloc[:, -1]
 
 def test_modelo_knn():
     # Importando modelo de KNN
-    knn_path = 'modelo/modelo_finalizado.pkl'
-    modelo_knn = modelo.carrega_modelo(knn_path)
+    path = 'modelo/modelo_finalizado.pkl'
+    modelo_knn = modelo.carrega_modelo(path)
 
     # Obtendo as métricas do KNN
     acuracia_knn, recall_knn, precisao_knn, f1_knn = avaliador.avaliar(

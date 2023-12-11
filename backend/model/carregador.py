@@ -1,6 +1,6 @@
 import pandas as pd
 
-url_certo = "database/Cancer_Data.csv"
+url_certo = "database/cancer_data.csv"
 
 
 class Carregador:

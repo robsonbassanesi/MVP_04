@@ -1,6 +1,5 @@
 import numpy as np
 import pickle
-from pydantic import BaseModel
 
 
 class Model:
@@ -8,10 +7,7 @@ class Model:
     def carrega_modelo(path):
         """Dependendo se o final for .pkl ou .joblib, carregamos de uma forma ou de outra
         """
-        if path.endswith('.pkl'):
-            model = pickle.load(open(path, 'rb'))
-        else:
-            raise Exception('Formato de arquivo não suportado')
+        model = pickle.load(open(path, 'rb'))
         return model
 
     def preditor(model, form):

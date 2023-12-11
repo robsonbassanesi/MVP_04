@@ -137,7 +137,7 @@ def apresenta_paciente(paciente: Paciente):
         "concave_points_worst": paciente.concave_points_worst,
         "symmetry_worst": paciente.symmetry_worst,
         "fractal_dimension_worst": paciente.fractal_dimension_worst,
-        # "outcome": paciente.outcome
+        "outcome": paciente.outcome
     }
 # Apresenta uma lista de pacientes
 
@@ -181,7 +181,7 @@ def apresenta_pacientes(pacientes: List[Paciente]):
             "concave_points_worst": paciente.concave_points_worst,
             "symmetry_worst": paciente.symmetry_worst,
             "fractal_dimension_worst": paciente.fractal_dimension_worst,
-            # "outcome": paciente.outcome
+            "outcome": paciente.outcome
         })
 
     return {"pacientes": result}
